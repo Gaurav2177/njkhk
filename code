@@ -98,7 +98,8 @@ Sub CreateArticulationPresentation()
     ' Slide 8: Articulation in Different Contexts
     slideIndex = slideIndex + 1
     With pptPres.Slides.Add(slideIndex, 2)
-        .Shapes(1).TextFrame.TextRange.Text = "Articulation in Different Contexts"
+        .Shapes(1).TextFrame.TextRange
+        .TextRange.Text = "Articulation in Different Contexts"
         .Shapes(2).TextFrame.TextRange.Text = "1. Public Speaking:" & vbCrLf & _
                                               "   The act or process of making speeches in public." & vbCrLf & vbCrLf & _
                                               "2. Everyday Conversation:" & vbCrLf & _
@@ -121,4 +122,6 @@ Sub CreateArticulationPresentation()
     slideIndex = slideIndex + 1
     With pptPres.Slides.Add(slideIndex, 2)
         .Shapes(1).TextFrame.TextRange.Text = "Conclusion"
-        .Shapes(2).TextFrame.TextRange.Text = "Summary
+        .Shapes(2).TextFrame.TextRange.Text = "Summary: Articulation is a crucial aspect of effective communication, ensuring clarity and understanding. By understanding the components, addressing common problems, and practicing techniques, individuals can improve their articulation skills across various contexts."
+    End With
+End Sub
